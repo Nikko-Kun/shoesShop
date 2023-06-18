@@ -1,0 +1,134 @@
+.menuCybersoft {
+  background: $color-gray-5;
+  text-transform: uppercase;
+  font-size: $fs-16;
+  text-align: center;  
+  margin-top: 70px;
+  .container{
+    padding: 0;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;     
+      .menuCybersoft__left,
+      .menuCybersoft__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbar-nav {
+          flex-direction: row;
+          .active {
+            .nav-link {
+              color: $color-black-1;
+            }
+          }
+          .nav-link {
+            list-style: none;
+            text-decoration: none;
+            i {
+              font-size: 0;
+            }
+            &:hover {
+              color: $color-black-1;
+            }
+          }
+        }
+      }
+      .menuCybersoft__left {
+        .nav-link {
+          padding-right: 30px;
+        }
+      }
+      .menuCybersoft__right {
+        .nav-link {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  
+}
+
+@include responsive("medium") {
+  .menuCybersoft {
+    font-size: $fs-13;
+    z-index: 20;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 0;    
+    .container {
+      max-width: 400px;
+      margin: auto;
+      .navbar {        
+        .menuCybersoft__left,
+        .menuCybersoft__right {          
+          .navbar-nav {
+            .nav-link {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              i {
+                font-size: $fs-16;
+              }
+              span {
+                font-size: 9px;
+              }
+              .menu-contact {
+                font-size: 0;
+              }
+            }
+          }
+         
+        }
+        .menuCybersoft__left {
+          .navbar-nav {
+            .nav-link {
+              justify-content: flex-start;
+            }
+          }
+        }
+        .menuCybersoft__right {
+          .navbar-nav {
+            .nav-link {
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive("small-350") {
+  .menuCybersoft {      
+    .container {
+      max-width: 320px;    
+      .navbar {
+        .menuCybersoft__left,
+        .menuCybersoft__right {
+          .navbar-nav {
+            .nav-link {             
+              i {
+                font-size: $fs-13;
+              }
+              span {
+                font-size: 7px;
+              }
+              .menu-contact {
+                font-size: 0;
+              }
+            }
+          }         
+        }
+        .menuCybersoft__left {
+          width: 30%;            
+        }
+      }
+    }
+  }
+}

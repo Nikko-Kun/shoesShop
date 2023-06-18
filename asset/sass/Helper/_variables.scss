@@ -1,0 +1,36 @@
+//color
+$color-gray-1: #F3F3F3;
+$color-gray-2: #D9D9D9;
+$color-gray-3: #DCDCDC;
+$color-gray-4: #757575;
+$color-gray-5: #f7f5f5;
+$color-black-1: #171717;
+$color-white-1: #FFFFFF;
+$color-yellow-1: #FFD600;
+$color-red-1: #FF0000;
+$color-red-2: #FF5A5A;
+
+//font-size
+$fs-13: 13px;
+$fs-16: 16px;
+$fs-20: 20px;
+$fs-24: 24px;
+$fs-32: 32px;
+$fs-50: 50px;
+$fs-60: 60px;
+$fs-70: 70px;
+
+//font weight
+$fw-300: 300;
+$fw-400: 400;
+$fw-700: 700;
+
+//break points
+$breakpoints:(
+    'extra-large': 1200px,
+    'large': 992px,
+    'medium': 768px,
+    'small': 576px,
+    'small-430': 430px,
+    'small-350': 350px
+);

@@ -1,0 +1,115 @@
+.profileCybersoft {
+  background: $color-gray-3;
+  padding: 50px 0;
+  line-height: 1.5;
+  .container {
+    padding: 30px 0;
+    text-align: center;
+    h1 {
+      @include styleText($color-black-1, $fs-32, $fw-700);
+      text-transform: uppercase;
+      margin-bottom: 50px;
+    }
+    .profileCybersoft__content {
+      background: $color-gray-4;
+      box-shadow: 0px 6px 6px rgba(23, 23, 23, 0.3);
+      padding: 30px;
+      max-width: 500px;
+      margin: 0 auto 50px;
+      display: flex;
+      flex-wrap: wrap;
+      .profile__left {
+        padding-right: 30px;
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .profile__right {
+        width: 70%;
+
+        .profile__item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+          h6 {
+            @include styleText($color-black-1, $fs-16, $fw-700);
+          }
+          p {
+            width: 70%;
+            @include styleText($color-white-1, $fs-16, $fw-300);
+            margin-bottom: 8px;
+            text-align: left;
+          }
+        }
+        .profile__item:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+    .profileCybersoft {
+      margin-top: 70px;
+    }
+  }
+
+@include responsive("small-430") {
+  .profileCybersoft {
+    .container {
+      h1 {
+        font-size: $fs-20;
+      }
+      .profileCybersoft__content {
+        max-width: 430px;
+        margin: 0 auto 60px;
+        .profile__left {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0;
+          img {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        .profile__right {
+          width: 100%;
+          margin: 20px;
+          .profile__item {
+           p{
+            width: 65%;
+           }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @include responsive("small-350") {
+//   .profileCybersoft {
+//     h1 {
+//       font-size: $fs-20;
+//     }
+//     .profileCybersoft__content {
+//       .profile__left {
+//         img {
+//           width: 50px;
+//           height: 50px;
+//         }
+//       }
+//       .profile__right {
+//         width: 70%;
+//         .profile__item {
+//           h6,
+//           p {
+//             font-size: 10px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
