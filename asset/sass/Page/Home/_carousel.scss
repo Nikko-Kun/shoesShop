@@ -1,0 +1,117 @@
+.carouselShoe {
+  .carousel-indicators {
+    li {
+      width: 10px;
+      height: 10px;
+      background-color: $color-gray-2;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+  }
+  .banner {
+    background: linear-gradient(50deg, $color-white-1, $color-gray-2);
+    min-height: calc(100vh - 110px);
+    position: relative;
+    .container {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      align-items: center;
+      h1 {
+        @include styleText($color-black-1,$fs-70,$fw-700);        
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0.5em 0;
+        margin-bottom: 0;
+      }
+      .carousel__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -30px;
+        .carousel__itemleft {
+          width: 50%;
+          img {
+            width: 70%;
+            height: auto;
+            margin: -30px 0;
+            margin-right: -120px;
+            transform: rotateY(180deg);
+          }
+        }
+        .carousel__itemright {
+          width: 50%;
+          h3 {
+            @include styleText($color-black-1,$fs-32,$fw-700);                
+            text-transform: uppercase;
+          }
+          p {
+            font-size: $fs-20;
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@include responsive("large") {
+  .carouselShoe {
+    .banner {
+      .container {
+        h1 {
+          font-size: $fs-60;
+          padding: 1em 0 1em;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .carouselShoe {
+    margin-top: 70px;
+    .banner {
+      .container {
+        h1 {
+          font-size: $fs-50;
+          padding: 0.9em 0 1.1em;
+        }
+        .carousel__content {
+          .carousel__itemright {
+            h3 {
+              font-size: $fs-24;
+            }
+            p {
+              font-size: $fs-16;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive("small") {
+  .carouselShoe {
+    .banner {
+      .container {
+        h1 {
+          font-size: $fs-32;
+          padding: 1em 0 2.5em;
+        }
+        .carousel__content {
+          .carousel__itemright {
+            h3 {
+              font-size: $fs-20;
+            }
+            p {
+              font-size: $fs-13;
+            }
+          }
+        }
+      }
+    }
+  }
+}

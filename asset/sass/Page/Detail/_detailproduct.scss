@@ -1,0 +1,142 @@
+.detailPro {
+  padding-top: 50px;
+  color: $color-black-1;
+  line-height: 1.5;
+  .container {
+    .detailPro__content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .detailPro__left {
+        width: 40%;
+        img {
+          display: block;
+          width: 70%;
+          height: auto;
+          text-align: center;
+        }
+      }
+      .detailPro__right {
+        width: 60%;
+        @include styleButton($color-gray-1, 30px, 30px, none, 20px);
+        .detailPro__rightbanner {
+          padding: 0 15px;
+          h1 {
+            @include styleText($color-black-1, $fs-32, $fw-700);
+            text-transform: capitalize;
+            margin-bottom: 16px;
+          }
+          .star-line-sold {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            .detailPro__star {
+              margin-bottom: 5px;
+              .text-yellow-300 {
+                color: $color-yellow-1;
+              }
+            }
+            .detailPro__line {
+              background: $color-gray-2;
+              width: 1px;
+              height: 25px;
+            }
+            .detailPro__sold {
+              text-transform: capitalize;
+              width: 50%;
+            }
+          }
+          .price-like {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            h3 {
+              @include styleText($color-red-1, 1.75rem, $fw-700);
+              margin: 0;              
+            }
+            .detail-like{
+              width: 50%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              i{
+                @include styleText($color-red-2,$fs-24,$fw-400);              
+                cursor: pointer;                
+                &:hover{
+                  @include styleText($color-red-1,$fs-24,$fw-700);
+                }
+              }
+              span{
+                @include styleText($color-black-1,$fs-16,$fw-300);
+                padding-left: 5px;
+              }        
+              
+            }
+          }
+          h3 {
+            @include styleText($color-black-1, 1.75rem, $fw-700);
+            margin-bottom: 8px;
+          }
+          .detailPro__size {
+            margin-bottom: 22px;
+            .cirle {
+              border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              margin-right: 10px;
+              border-color: $color-gray-2;
+              box-shadow: 0px 20px 25px -5px rgba(17, 17, 17, 0.1);
+              &:focus {
+                outline: none;
+                border-color: $color-red-1;
+              }
+              span {
+                border: 0 solid $color-gray-4;
+              }
+            }
+          }
+          .detailPro__qty-card {
+            .detailPro__qty-message {
+              margin-bottom: 16px;
+              p {
+                margin-bottom: 8px;
+              }
+              .group-input {
+                display: flex;
+                align-items: center;
+                span {
+                  @include styleText($color-black-1, $fs-16, $fw-700);
+                  border: 1px solid $color-gray-4;
+                  background: $color-white-1;
+                  padding: 8px 15px;
+                  transition: all 0.5s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive("large") {
+  .detailPro {
+    .container {
+      .detailPro__content {
+        .detailPro__left {
+          width: 100%;
+          padding: 0;
+          img {
+            width: 70%;
+          }
+        }
+        .detailPro__right {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

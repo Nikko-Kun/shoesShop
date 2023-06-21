@@ -1,0 +1,32 @@
+.product {
+    background-size: cover;
+    padding: 40px 0;
+    .card {
+        position: relative;
+    }
+    img {
+        background-color: $color-gray-3;
+    }
+    .like-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        &:hover {
+            color: $color-red-2;
+        }
+    }
+    .btn-buy {
+        width: 50%;
+    }
+    .price-tag {
+        padding-left: 50px;
+    }
+    .card-text {
+        @include styleText($color-black-1, $fs-16, $fw-300);      
+
+    }
+    h5 {
+            @include styleText($color-black-1, $fs-20, $fw-700);      
+    }
+
+}

@@ -17,10 +17,12 @@
 
 //layouts
 @import "./Layouts/header";
-@import "./Layouts/carousel";
+@import "./Layouts/menu";
+// @import "./Layouts/carousel";
 @import "./Layouts/product";
-
+@import "./Layouts/footer";
 
 //Pages
+@import "./Page/Home/carousel";
 
-//Theme
+

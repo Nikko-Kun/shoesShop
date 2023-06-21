@@ -1,0 +1,18 @@
+footer {
+    background-color: $color-gray-2;
+    color: $color-gray-1;
+
+    ul {
+        list-style: none;
+    }
+    li {
+        padding-top: 15px;
+    }
+    a {
+        &:hover {
+            text-decoration: none;
+            color: $color-red-2;
+        }
+    }
+
+}
