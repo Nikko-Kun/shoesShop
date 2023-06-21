@@ -485,4 +485,91 @@ footer a:hover {
   .carouselShoe .banner .container .carousel__content .carousel__itemright p {
     font-size: 13px;
   }
+}
+.loginCybersoft {
+  background: #DCDCDC;
+  padding: 50px 0;
+}
+.loginCybersoft .container {
+  padding: 30px 0;
+}
+.loginCybersoft .container .loginCybersoft__title {
+  text-align: center;
+  padding: 0 20px;
+}
+.loginCybersoft .container .loginCybersoft__title h1 {
+  color: #171717;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.loginCybersoft .container .loginCybersoft__title a {
+  text-decoration: none;
+  transition: all 0.5s;
+  font-weight: 700;
+}
+.loginCybersoft .container .loginCybersoft__title a:hover {
+  color: #FF0000;
+}
+.loginCybersoft .container form {
+  background: #757575;
+  border-radius: 20px;
+  padding: 30px 50px;
+  max-width: 500px;
+  margin: 0 auto 50px;
+}
+.loginCybersoft .container form .loginCybersoft__item {
+  margin-bottom: 25px;
+}
+.loginCybersoft .container form .loginCybersoft__item label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #F3F3F3;
+}
+.loginCybersoft .container form .loginCybersoft__item input {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  width: 100%;
+  height: 55px;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  background: #f7f5f5;
+  outline: none;
+}
+
+.signInCybersoft {
+  background: #DCDCDC;
+  padding: 50px 0;
+}
+.signInCybersoft .container {
+  padding: 30px 0;
+}
+.signInCybersoft .container .signIn-form {
+  background: #757575;
+  border-radius: 20px;
+  padding: 30px 50px;
+  max-width: 500px;
+  margin: 0 auto 50px;
+}
+.signInCybersoft .container .signIn-form .signInCybersoft__item {
+  margin-bottom: 25px;
+}
+.signInCybersoft .container .signIn-form .signInCybersoft__item label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #F3F3F3;
+}
+.signInCybersoft .container .signIn-form .signInCybersoft__item input {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  width: 100%;
+  height: 55px;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  background: #f7f5f5;
+  outline: none;
 }/*# sourceMappingURL=main.css.map */
