@@ -1,9 +1,9 @@
-.signInCybersoft {
-    background: $color-gray-3;
+.registerCybersoft {
+    background: $color-white-1;
     padding: 50px 0;
     .container {
       padding: 30px 0;
-      .signInCybersoft__title {
+      .registerCybersoft__title {
         text-align: center;
         padding: 0 20px;
         h1 {
@@ -19,29 +19,35 @@
           }
         }
       }
-      .signIn-form {
-        background: $color-gray-4;
+      .register-form {
+        background: $color-gray-1;
         border-radius: 20px;
         padding: 30px 50px;
-        max-width: 800px;
-        margin: 0 auto 50px;
-        .signInCybersoft__item {
+        max-width: 650px;
+        margin: 0 auto 20px;
+        .registerCybersoft__item {
           margin-bottom: 25px;
           label {
             display: inline-block;
             margin-bottom: 0.5rem;
-            color: $color-gray-1;
+            color: $color-black-1;
+            width: 80px;
           }
           input {
-            @include styleText($color-black-1, $fs-16, $fw-400);
+            @include styleText($color-black-1, $fs-16, $fw-300);
             border-radius: 8px;
-            width: 100%;
+            width: 400px;
             height: 55px;
             padding: 5px 20px;        
             border: 1px solid transparent;
-            background: $color-gray-5;
+            background: $color-white-1;
             outline: none;
           }
+          .res-input {
+            @include styleText($color-black-1, $fs-16, $fw-300);
+
+          }
+          
         }
       }
     }

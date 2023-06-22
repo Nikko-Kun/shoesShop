@@ -64,7 +64,7 @@ html, body {
 }
 
 .btnLogIn {
-  background: #171717;
+  background: #757575;
   padding: 10px 30px;
   border: none;
   border-radius: 10px;
@@ -72,10 +72,26 @@ html, body {
   transition: all 0.5s;
 }
 .btnLogIn:hover {
-  background: #F3F3F3;
+  background: #FFD600;
   color: #171717;
 }
 .btnLogIn:focus {
+  box-shadow: none;
+}
+
+.btnRegister {
+  background: #757575;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #FFFFFF;
+  transition: all 0.5s;
+}
+.btnRegister:hover {
+  background: #FFD600;
+  color: #171717;
+}
+.btnRegister:focus {
   box-shadow: none;
 }
 
@@ -635,7 +651,7 @@ footer a:hover {
   }
 }
 .loginCybersoft {
-  background: #DCDCDC;
+  background: #FFFFFF;
   padding: 50px 0;
 }
 .loginCybersoft .container {
@@ -660,7 +676,7 @@ footer a:hover {
   color: #FF0000;
 }
 .loginCybersoft .container form {
-  background: #757575;
+  background: #F3F3F3;
   border-radius: 20px;
   padding: 30px 50px;
   max-width: 500px;
@@ -672,70 +688,98 @@ footer a:hover {
 .loginCybersoft .container form .loginCybersoft__item label {
   display: inline-block;
   margin-bottom: 0.5rem;
-  color: #F3F3F3;
+  color: #171717;
 }
 .loginCybersoft .container form .loginCybersoft__item input {
   color: #171717;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   border-radius: 8px;
   width: 100%;
   height: 55px;
   padding: 5px 20px;
   border: 1px solid transparent;
-  background: #f7f5f5;
+  background: #FFFFFF;
   outline: none;
 }
 
-.signInCybersoft {
-  background: #DCDCDC;
+.registerCybersoft {
+  background: #FFFFFF;
   padding: 50px 0;
 }
-.signInCybersoft .container {
+.registerCybersoft .container {
   padding: 30px 0;
 }
-.signInCybersoft .container .signInCybersoft__title {
+.registerCybersoft .container .registerCybersoft__title {
   text-align: center;
   padding: 0 20px;
 }
-.signInCybersoft .container .signInCybersoft__title h1 {
+.registerCybersoft .container .registerCybersoft__title h1 {
   color: #171717;
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
 }
-.signInCybersoft .container .signInCybersoft__title a {
+.registerCybersoft .container .registerCybersoft__title a {
   text-decoration: none;
   transition: all 0.5s;
   font-weight: 700;
 }
-.signInCybersoft .container .signInCybersoft__title a:hover {
+.registerCybersoft .container .registerCybersoft__title a:hover {
   color: #FF0000;
 }
-.signInCybersoft .container .signIn-form {
-  background: #757575;
+.registerCybersoft .container .register-form {
+  background: #F3F3F3;
   border-radius: 20px;
   padding: 30px 50px;
-  max-width: 800px;
-  margin: 0 auto 50px;
+  max-width: 650px;
+  margin: 0 auto 20px;
 }
-.signInCybersoft .container .signIn-form .signInCybersoft__item {
+.registerCybersoft .container .register-form .registerCybersoft__item {
   margin-bottom: 25px;
 }
-.signInCybersoft .container .signIn-form .signInCybersoft__item label {
+.registerCybersoft .container .register-form .registerCybersoft__item label {
   display: inline-block;
   margin-bottom: 0.5rem;
-  color: #F3F3F3;
+  color: #171717;
+  width: 80px;
 }
-.signInCybersoft .container .signIn-form .signInCybersoft__item input {
+.registerCybersoft .container .register-form .registerCybersoft__item input {
   color: #171717;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   border-radius: 8px;
-  width: 100%;
+  width: 400px;
   height: 55px;
   padding: 5px 20px;
   border: 1px solid transparent;
-  background: #f7f5f5;
+  background: #FFFFFF;
   outline: none;
+}
+.registerCybersoft .container .register-form .registerCybersoft__item .res-input {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.cartCybersoft {
+  background: #FFFFFF;
+  padding: 50px 0;
+}
+.cartCybersoft .container {
+  padding: 30px 0;
+}
+.cartCybersoft .container .cartCybersoft__title {
+  text-align: start;
+  padding: 0 20px;
+}
+.cartCybersoft .container .cartCybersoft__title h1 {
+  color: #171717;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cartCybersoft .container .cartCybersoft__title input {
+  text-align: center;
+  border: 1px solid #6C757D;
 }/*# sourceMappingURL=main.css.map */

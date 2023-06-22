@@ -95,7 +95,7 @@
             <li class="nav-item">
               <a class="nav-link" href="./register.html">
                 <i class="fa-solid fa-user-plus"></i>
-                <span>register</span>
+                <span>sign up</span>
               </a>
             </li>
           </ul>
@@ -104,34 +104,81 @@
     </div>
   </nav>
 
-  <!--! LOG IN  -->
-  <section class="loginCybersoft">
+  <!--! CART  -->
+  <section class="cartCybersoft">
     <div class="container">
-      <div class="loginCybersoft__title">
-        <h1>Log in</h1>
+      <div class="cartCybersoft__title">
+        <h1>Cart</h1>
         <div>
           <p>
-            Nếu chưa có tài khoản
-            <a href="./register.html">nhấn vào đây</a>
-            để đăng ký!!
+           
           </p>
         </div>
       </div>
-      <form>
-        <div class="login-form">
-          <div class="loginCybersoft__item">
-            <label for="loginEmail">Email</label>
-            <input name="email" type="email" id="loginEmail" placeholder="Vui lòng nhập email của bạn" />
-          </div>
-          <div class="loginCybersoft__item">
-            <label for="loginPass">Password</label>
-            <input name="password" type="password" id="loginPass" placeholder="Vui lòng nhập mật khẩu" />
-          </div>
-          <div class="loginCybersoft__item">
-            <button type="submit" class="btn btnLogIn">Đăng nhập</button>
-          </div>
-        </div>
-      </form>
+      <div class="cartCybersoft__body">
+
+      <table class="table">
+        <thead>
+          <tr class="table-secondary">
+            <th scope="col">
+              <div>
+                <input type="checkbox" id="scales" name="scales" checked>
+              </div>
+            </th>
+            <th scope="col">id</th>
+            <th scope="col">img</th>
+            <th scope="col">name</th>
+            <th scope="col">price</th>
+            <th scope="col">quantity</th>
+            <th scope="col">total</th>
+            <th scope="col">action</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"> <div>
+              <input type="checkbox" id="scales" name="scales" checked>
+            </div>
+          </th>
+            <td>1</td>
+            <td>
+              <img src="../asset/img/image 5.png">
+            </td>
+            <td>Product 1</td>
+            <td>1000</td>
+            <td>
+              <div class="row g-3">
+                <div class="col-2" >
+                  <button type="button" class="btn btn-secondary"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="col-1" >
+                  <input class="form-control w-50" type="number">
+                </div>
+                <div class="col-1" >
+                  <button type="button" class="btn btn-secondary"><i class="fa-solid fa-minus"></i></button>
+                </div>
+              </div>
+              </td>
+
+            
+            <td>1000</td>
+            <td>
+              <button type="button" class="btn btn-primary">Edit</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+            </td>
+            
+
+          </tr>
+          
+        </tbody>
+      </table>
+      <div>
+        <button type="button" class="btn btn-warning">Submit Order</button>
+      </div>
+    </div>
+
     </div>
   </section>
 

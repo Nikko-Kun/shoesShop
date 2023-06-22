@@ -93,7 +93,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./signIn.html">
+              <a class="nav-link" href="./register.html">
                 <i class="fa-solid fa-user-plus"></i>
                 <span>sign up</span>
               </a>
@@ -104,11 +104,11 @@
     </div>
   </nav>
 
-  <!--! SIGN IN  -->
-  <section class="signInCybersoft">
+  <!--! REGISTER  -->
+  <section class="registerCybersoft">
     <div class="container">
-      <div class="signInCybersoft__title">
-        <h1>Sign In</h1>
+      <div class="registerCybersoft__title">
+        <h1>Register</h1>
         <div>
           <p>
             Nếu đã có tài khoản
@@ -118,77 +118,57 @@
         </div>
       </div>
       <form>
-        <div class="signIn-form">
-          <div class="signInCybersoft__item">
+        <div class="register-form">
+          <div class="registerCybersoft__item">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputName" class="col-form-label">Họ tên</label>
+                <label for="inputName" class="col-form-label res-lable">Họ tên</label>
               </div>
               <div class="col-auto">
-                <input name="name" type="text" id="signInName" placeholder=""/>
-              </div>
-              <div class="col-auto">
-                <span class="form-text">
-                  Chỉ nhâp ký tự chữ.
-                </span>
+                <input name="name" type="text" id="registerName" placeholder="Chỉ nhâp ký tự chữ"/>
               </div>
             </div>
           </div>
-          <div class="signInCybersoft__item">
+          <div class="registerCybersoft__item">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputPhoneNum" class="col-form-label">Giới tính</label>
+                <label for="inputPhoneNum" class="col-form-label res-lable">Giới tính</label>
               </div>
               <div class="col-auto">
-              <select name="" id="loaiSV" class="form-control">
-                  <option>Nam</option>
-                  <option>Nữ</option>
+              <select name="" id="loaiSV" class="form-control res-input">
+                  <option value=true>Nam</option>
+                  <option value=false>Nữ</option>
               </select>
               </div>
             </div>
           </div>
-          <div class="signInCybersoft__item">
+          <div class="registerCybersoft__item">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputEmail" class="col-form-label">Email</label>
+                <label for="inputEmail" class="col-form-label res-lable">Email</label>
               </div>
               <div class="col-auto">
-                <input name="email" type="email" id="signInMail" placeholder=""/>
-              </div>
-              <div class="col-auto">
-                <span class="form-text">
-                  email@gmail.com
-                </span>
+                <input name="email" type="email" id="registerMail" placeholder="email@gmail.com"/>
               </div>
             </div>
           </div>
-          <div class="signInCybersoft__item">
+          <div class="registerCybersoft__item">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputEmail" class="col-form-label">Password</label>
+                <label for="inputEmail" class="col-form-label res-lable">Password</label>
               </div>
               <div class="col-auto">
-                <input name="name" type="text" id="signInMail" placeholder=""/>
-              </div>
-              <div class="col-auto">
-                <span class="form-text">
-                  Phải chứ ký tự chữ, số, in hoa và ký tự đặt biệt.
-                </span>
+                <input name="name" type="text" id="registerMail" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
               </div>
             </div>
           </div>
-          <div class="signInCybersoft__item">
+          <div class="registerCybersoft__item">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputPhoneNum" class="col-form-label">Phone</label>
+                <label for="inputPhoneNum" class="col-form-label res-lable">Phone</label>
               </div>
               <div class="col-auto">
-                <input name="PhoneNum" type="number" id="signInPhoneNum" placeholder=""/>
-              </div>
-              <div class="col-auto">
-                <span class="form-text">
-                  Chỉ được nhập số.
-                </span>
+                <input name="PhoneNum" type="number" id="registerPhoneNum" placeholder="Chỉ được nhập số (0-9)"/>
               </div>
             </div>
           </div>
@@ -197,8 +177,8 @@
 
 
 
-          <div class="loginCybersoft__item">
-            <button type="submit" class="btn btnLogIn">Đăng ký</button>
+          <div class="registerCybersoft__item">
+            <button type="submit" class="btn btnRegister">Đăng ký</button>
           </div>
         </div>
       </form>
