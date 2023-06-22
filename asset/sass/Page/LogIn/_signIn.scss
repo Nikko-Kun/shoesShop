@@ -3,11 +3,27 @@
     padding: 50px 0;
     .container {
       padding: 30px 0;
+      .signInCybersoft__title {
+        text-align: center;
+        padding: 0 20px;
+        h1 {
+          @include styleText($color-black-1, $fs-32, $fw-700);
+          text-transform: uppercase;
+        }
+        a {
+          text-decoration: none;
+          transition: all 0.5s;
+          font-weight: 700;
+          &:hover {
+            color: $color-red-1;
+          }
+        }
+      }
       .signIn-form {
         background: $color-gray-4;
         border-radius: 20px;
         padding: 30px 50px;
-        max-width: 500px;
+        max-width: 800px;
         margin: 0 auto 50px;
         .signInCybersoft__item {
           margin-bottom: 25px;
