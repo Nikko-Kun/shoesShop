@@ -95,7 +95,7 @@
             <li class="nav-item">
               <a class="nav-link" href="./register.html">
                 <i class="fa-solid fa-user-plus"></i>
-                <span>register</span>
+                <span>Register</span>
               </a>
             </li>
           </ul>
@@ -104,31 +104,81 @@
     </div>
   </nav>
 
-  <!--! LOG IN  -->
-  <section class="loginCybersoft">
+  <!--! REGISTER  -->
+  <section class="registerCybersoft">
     <div class="container">
-      <div class="loginCybersoft__title">
-        <h1>Log in</h1>
+      <div class="registerCybersoft__title">
+        <h1>Register</h1>
         <div>
           <p>
-            Nếu chưa có tài khoản
-            <a href="./register.html">nhấn vào đây</a>
-            để đăng ký!!
+            Nếu đã có tài khoản
+            <a href="./login.html">nhấn vào đây</a>
+            để đăng nhập!!
           </p>
         </div>
       </div>
       <form>
-        <div class="login-form">
-          <div class="loginCybersoft__item">
-            <label for="loginEmail">Email</label>
-            <input name="email" type="email" id="loginEmail" placeholder="Vui lòng nhập email của bạn" />
+        <div class="register-form">
+          <div class="registerCybersoft__item">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="inputName" class="col-form-label res-lable">Họ tên</label>
+              </div>
+              <div class="col-auto">
+                <input name="name" type="text" id="registerName" placeholder="Chỉ nhâp ký tự chữ"/>
+              </div>
+            </div>
           </div>
-          <div class="loginCybersoft__item">
-            <label for="loginPass">Password</label>
-            <input name="password" type="password" id="loginPass" placeholder="Vui lòng nhập mật khẩu" />
+          <div class="registerCybersoft__item">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="inputPhoneNum" class="col-form-label res-lable">Giới tính</label>
+              </div>
+              <div class="col-auto">
+              <select name="" id="loaiSV" class="form-control res-input">
+                  <option value=true>Nam</option>
+                  <option value=false>Nữ</option>
+              </select>
+              </div>
+            </div>
           </div>
-          <div class="loginCybersoft__item">
-            <button type="submit" class="btn btnLogIn">Đăng nhập</button>
+          <div class="registerCybersoft__item">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="inputEmail" class="col-form-label res-lable">Email</label>
+              </div>
+              <div class="col-auto">
+                <input name="email" type="email" id="registerMail" placeholder="email@gmail.com"/>
+              </div>
+            </div>
+          </div>
+          <div class="registerCybersoft__item">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="inputEmail" class="col-form-label res-lable">Password</label>
+              </div>
+              <div class="col-auto">
+                <input name="name" type="text" id="registerMail" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
+              </div>
+            </div>
+          </div>
+          <div class="registerCybersoft__item">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="inputPhoneNum" class="col-form-label res-lable">Phone</label>
+              </div>
+              <div class="col-auto">
+                <input name="PhoneNum" type="number" id="registerPhoneNum" placeholder="Chỉ được nhập số (0-9)"/>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="registerCybersoft__item">
+            <button type="submit" class="btn btnRegister">Đăng ký</button>
           </div>
         </div>
       </form>

@@ -64,7 +64,7 @@ html, body {
 }
 
 .btnLogIn {
-  background: #171717;
+  background: #757575;
   padding: 10px 30px;
   border: none;
   border-radius: 10px;
@@ -72,10 +72,26 @@ html, body {
   transition: all 0.5s;
 }
 .btnLogIn:hover {
-  background: #F3F3F3;
+  background: #FFD600;
   color: #171717;
 }
 .btnLogIn:focus {
+  box-shadow: none;
+}
+
+.btnRegister {
+  background: #757575;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #FFFFFF;
+  transition: all 0.5s;
+}
+.btnRegister:hover {
+  background: #FFD600;
+  color: #171717;
+}
+.btnRegister:focus {
   box-shadow: none;
 }
 
@@ -346,6 +362,56 @@ header .navbar .header__content .header__like .nav-link .total-qtylike {
     width: 30%;
   }
 }
+.product {
+  background-size: cover;
+  padding: 40px 0;
+}
+.product .card {
+  position: relative;
+}
+.product img {
+  background-color: #DCDCDC;
+}
+.product .like-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.product .like-icon:hover {
+  color: #FF5A5A;
+}
+.product .btn-buy {
+  width: 50%;
+}
+.product .price-tag {
+  padding-left: 50px;
+}
+.product .card-text {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 300;
+}
+.product h5 {
+  color: #171717;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer {
+  background-color: #D9D9D9;
+  color: #F3F3F3;
+}
+footer ul {
+  list-style: none;
+}
+footer li {
+  padding-top: 15px;
+}
+footer a:hover {
+  text-decoration: none;
+  color: #FF5A5A;
+}
+
 .carouselShoe .carousel-indicators li {
   width: 10px;
   height: 10px;
@@ -435,4 +501,285 @@ header .navbar .header__content .header__like .nav-link .total-qtylike {
   .carouselShoe .banner .container .carousel__content .carousel__itemright p {
     font-size: 13px;
   }
+}
+.detailPro {
+  padding-top: 50px;
+  color: #171717;
+  line-height: 1.5;
+}
+.detailPro .container .detailPro__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.detailPro .container .detailPro__content .detailPro__left {
+  width: 40%;
+}
+.detailPro .container .detailPro__content .detailPro__left img {
+  display: block;
+  width: 70%;
+  height: auto;
+  text-align: center;
+}
+.detailPro .container .detailPro__content .detailPro__right {
+  width: 60%;
+  background: #F3F3F3;
+  padding: 30px 30px;
+  border: none;
+  border-radius: 20px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner {
+  padding: 0 15px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner h1 {
+  color: #171717;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .star-line-sold {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .star-line-sold .detailPro__star {
+  margin-bottom: 5px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .star-line-sold .detailPro__star .text-yellow-300 {
+  color: #FFD600;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .star-line-sold .detailPro__line {
+  background: #D9D9D9;
+  width: 1px;
+  height: 25px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .star-line-sold .detailPro__sold {
+  text-transform: capitalize;
+  width: 50%;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .price-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .price-like h3 {
+  color: #FF0000;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .price-like .detail-like {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .price-like .detail-like i {
+  color: #FF5A5A;
+  font-size: 24px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .price-like .detail-like i:hover {
+  color: #FF0000;
+  font-size: 24px;
+  font-weight: 700;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .price-like .detail-like span {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 5px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner h3 {
+  color: #171717;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .detailPro__size {
+  margin-bottom: 22px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .detailPro__size .cirle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-color: #D9D9D9;
+  box-shadow: 0px 20px 25px -5px rgba(17, 17, 17, 0.1);
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .detailPro__size .cirle:focus {
+  outline: none;
+  border-color: #FF0000;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .detailPro__size .cirle span {
+  border: 0 solid #757575;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .detailPro__qty-card .detailPro__qty-message {
+  margin-bottom: 16px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .detailPro__qty-card .detailPro__qty-message p {
+  margin-bottom: 8px;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .detailPro__qty-card .detailPro__qty-message .group-input {
+  display: flex;
+  align-items: center;
+}
+.detailPro .container .detailPro__content .detailPro__right .detailPro__rightbanner .detailPro__qty-card .detailPro__qty-message .group-input span {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #757575;
+  background: #FFFFFF;
+  padding: 8px 15px;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 992px) {
+  .detailPro .container .detailPro__content .detailPro__left {
+    width: 100%;
+    padding: 0;
+  }
+  .detailPro .container .detailPro__content .detailPro__left img {
+    width: 70%;
+  }
+  .detailPro .container .detailPro__content .detailPro__right {
+    width: 100%;
+  }
+}
+.loginCybersoft {
+  background: #FFFFFF;
+  padding: 50px 0;
+}
+.loginCybersoft .container {
+  padding: 30px 0;
+}
+.loginCybersoft .container .loginCybersoft__title {
+  text-align: center;
+  padding: 0 20px;
+}
+.loginCybersoft .container .loginCybersoft__title h1 {
+  color: #171717;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.loginCybersoft .container .loginCybersoft__title a {
+  text-decoration: none;
+  transition: all 0.5s;
+  font-weight: 700;
+}
+.loginCybersoft .container .loginCybersoft__title a:hover {
+  color: #FF0000;
+}
+.loginCybersoft .container form {
+  background: #F3F3F3;
+  border-radius: 20px;
+  padding: 30px 50px;
+  max-width: 500px;
+  margin: 0 auto 50px;
+}
+.loginCybersoft .container form .loginCybersoft__item {
+  margin-bottom: 25px;
+}
+.loginCybersoft .container form .loginCybersoft__item label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #171717;
+}
+.loginCybersoft .container form .loginCybersoft__item input {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 8px;
+  width: 100%;
+  height: 55px;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  background: #FFFFFF;
+  outline: none;
+}
+
+.registerCybersoft {
+  background: #FFFFFF;
+  padding: 50px 0;
+}
+.registerCybersoft .container {
+  padding: 30px 0;
+}
+.registerCybersoft .container .registerCybersoft__title {
+  text-align: center;
+  padding: 0 20px;
+}
+.registerCybersoft .container .registerCybersoft__title h1 {
+  color: #171717;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.registerCybersoft .container .registerCybersoft__title a {
+  text-decoration: none;
+  transition: all 0.5s;
+  font-weight: 700;
+}
+.registerCybersoft .container .registerCybersoft__title a:hover {
+  color: #FF0000;
+}
+.registerCybersoft .container .register-form {
+  background: #F3F3F3;
+  border-radius: 20px;
+  padding: 30px 50px;
+  max-width: 650px;
+  margin: 0 auto 20px;
+}
+.registerCybersoft .container .register-form .registerCybersoft__item {
+  margin-bottom: 25px;
+}
+.registerCybersoft .container .register-form .registerCybersoft__item label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #171717;
+  width: 80px;
+}
+.registerCybersoft .container .register-form .registerCybersoft__item input {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 8px;
+  width: 400px;
+  height: 55px;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  background: #FFFFFF;
+  outline: none;
+}
+.registerCybersoft .container .register-form .registerCybersoft__item .res-input {
+  color: #171717;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.cartCybersoft {
+  background: #FFFFFF;
+  padding: 50px 0;
+}
+.cartCybersoft .container {
+  padding: 30px 0;
+}
+.cartCybersoft .container .cartCybersoft__title {
+  text-align: start;
+  padding: 0 20px;
+}
+.cartCybersoft .container .cartCybersoft__title h1 {
+  color: #171717;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cartCybersoft .container .cartCybersoft__title input {
+  text-align: center;
+  border: 1px solid #6C757D;
 }/*# sourceMappingURL=main.css.map */
