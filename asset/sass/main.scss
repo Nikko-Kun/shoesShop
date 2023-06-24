@@ -19,10 +19,17 @@
 @import "./Layouts/header";
 @import "./Layouts/menu";
 // @import "./Layouts/carousel";
-// @import "./Layouts/product";
-
+@import "./Layouts/product";
+@import "./Layouts/footer";
 
 //Pages
 @import "./Page/Home/carousel";
+@import "./Page/Detail/detail";
+@import "./Page/LogIn/login";
+@import "./Page/Register/register";
+@import "./Page/Cart/cart";
+
+
+
 
 

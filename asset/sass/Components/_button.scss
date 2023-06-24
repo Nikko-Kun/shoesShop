@@ -47,11 +47,23 @@
 }
 
 .btnLogIn {
-  @include styleButton($color-black-1, 10px, 30px, none, 10px);
+  @include styleButton($color-gray-4, 10px, 30px, none, 10px);
   color: $color-white-1;
   transition: all 0.5s;
   &:hover {
-    background: $color-gray-1;
+    background: $color-yellow-1;
+    color: $color-black-1;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+.btnRegister {
+  @include styleButton($color-gray-4, 10px, 30px, none, 10px);
+  color: $color-white-1;
+  transition: all 0.5s;
+  &:hover {
+    background: $color-yellow-1;
     color: $color-black-1;
   }
   &:focus {

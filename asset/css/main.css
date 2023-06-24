@@ -198,7 +198,6 @@ header .navbar .header__content .header__item .header__search .relative input {
 header .navbar .header__content .header__cart,
 header .navbar .header__content .header__like {
   margin-top: 20px;
-  width: 10%;
 }
 header .navbar .header__content .header__cart .nav-link,
 header .navbar .header__content .header__like .nav-link {

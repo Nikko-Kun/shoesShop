@@ -64,7 +64,7 @@ html, body {
 }
 
 .btnLogIn {
-  background: #171717;
+  background: #757575;
   padding: 10px 30px;
   border: none;
   border-radius: 10px;
@@ -72,10 +72,26 @@ html, body {
   transition: all 0.5s;
 }
 .btnLogIn:hover {
-  background: #F3F3F3;
+  background: #FFD600;
   color: #171717;
 }
 .btnLogIn:focus {
+  box-shadow: none;
+}
+
+.btnRegister {
+  background: #757575;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #FFFFFF;
+  transition: all 0.5s;
+}
+.btnRegister:hover {
+  background: #FFD600;
+  color: #171717;
+}
+.btnRegister:focus {
   box-shadow: none;
 }
 
@@ -182,7 +198,6 @@ header .navbar .header__content .header__item .header__search .relative input {
 header .navbar .header__content .header__cart,
 header .navbar .header__content .header__like {
   margin-top: 20px;
-  width: 10%;
 }
 header .navbar .header__content .header__cart .nav-link,
 header .navbar .header__content .header__like .nav-link {
