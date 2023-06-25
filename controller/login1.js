@@ -15,7 +15,7 @@ function logIn() {
       .then(function (result) {
         var tk = result.data.content;
         localStorage.setItem("token", JSON.stringify(tk.accessToken));
-        window.location.pathname = "index.html";
+        window.location.href = "../index.html";
         alert(result.data.message);
       })
       .catch(function (error) {

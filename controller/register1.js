@@ -98,6 +98,7 @@ function register() {
         localStorage.setItem("taiKhoan", JSON.stringify(taiKhoan));
         alert(result.data.message);
         resetForm();
+        window.location.href = "./login.html";
       })
       .catch(function (error) {
         console.log(error);
@@ -111,5 +112,16 @@ getID("register").addEventListener("click", (e) => {
 });
 
 function resetForm() {
-  getID("form").reset();
+  getID("nameSignUp").value = "";
+  getID("spanName").style.display = "none";
+  getID("genderSignUp").value = "true";
+  getID("spanGender").style.display = "none";
+  getID("emailSignUp").value = "";
+  getID("spanEmail").style.display = "none";
+  getID("passwordSignUp").value = "";
+  getID("spanPass").style.display = "none";
+  getID("passwordConfirmSignUp").value = "";
+  getID("spanPassConfirm").style.display = "none";
+  getID("phoneSignUp").value = "";
+  getID("spanPhone").style.display = "none"; 
 }
