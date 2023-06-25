@@ -121,7 +121,15 @@
     }
   }
 }
+.product-related {
+  h1 {
+    @include styleText($color-black-1, 2.5rem, $fw-700);
+    text-align: center;
+    margin: 20px;
 
+
+  }
+}
 @include responsive("large") {
   .detailPro {
     .container {

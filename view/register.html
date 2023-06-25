@@ -117,71 +117,84 @@
           </p>
         </div>
       </div>
-      <form>
-        <div class="register-form">
-          <div class="registerCybersoft__item">
+        <div class="register-form" id="form">
+          <div class="registerCybersoft__item input-group">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputName" class="col-form-label res-lable">Họ tên</label>
+                <label for="" class="col-form-label res-lable">Họ tên</label>
               </div>
               <div class="col-auto">
-                <input name="name" type="text" id="registerName" placeholder="Chỉ nhâp ký tự chữ"/>
+                <input type="text" id="nameSignUp" placeholder="Chỉ nhập ký tự chữ"/>
+                <span id="spanName" class="text-danger"></span>
               </div>
             </div>
           </div>
-          <div class="registerCybersoft__item">
+          <div class="registerCybersoft__item input-group">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputPhoneNum" class="col-form-label res-lable">Giới tính</label>
+                <label for="" class="col-form-label res-lable">Giới tính</label>
               </div>
-              <div class="col-auto">
-              <select name="" id="loaiSV" class="form-control res-input">
-                  <option value=true>Nam</option>
-                  <option value=false>Nữ</option>
+              <div class="col-auto inputGender">
+              <select id="genderSignUp" class="form-control res-input">
+                  <option value='true'>Nam</option>
+                  <option value='false' >Nữ</option>
               </select>
+              <span id="spanGender" class="text-danger"></span>
               </div>
             </div>
           </div>
-          <div class="registerCybersoft__item">
+          <div class="registerCybersoft__item input-group">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputEmail" class="col-form-label res-lable">Email</label>
+                <label for="" class="col-form-label res-lable">Email</label>
               </div>
               <div class="col-auto">
-                <input name="email" type="email" id="registerMail" placeholder="email@gmail.com"/>
+                <input type="email" id="emailSignUp" placeholder="email@gmail.com"/>
+                <span id="spanEmail" class="text-danger"></span>
               </div>
             </div>
           </div>
-          <div class="registerCybersoft__item">
+          <div class="registerCybersoft__item input-group">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputEmail" class="col-form-label res-lable">Password</label>
+                <label for="" class="col-form-label res-lable">Password</label>
               </div>
               <div class="col-auto">
-                <input name="name" type="text" id="registerMail" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
+                <input type="text" id="passwordSignUp" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
+                <span id="spanPass" class="text-danger"></span>
               </div>
             </div>
           </div>
-          <div class="registerCybersoft__item">
+          <div class="registerCybersoft__item input-group">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
-                <label for="inputPhoneNum" class="col-form-label res-lable">Phone</label>
+                <label for="" class="col-form-label res-lable">Password Confirm</label>
               </div>
               <div class="col-auto">
-                <input name="PhoneNum" type="number" id="registerPhoneNum" placeholder="Chỉ được nhập số (0-9)"/>
+                <input type="text" id="passwordConfirmSignUp" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
+                <span id="spanPassConfirm" class="text-danger"></span>
+              </div>
+            </div>
+          </div>
+          <div class="registerCybersoft__item input-group">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="" class="col-form-label res-lable">Phone</label>
+              </div>
+              <div class="col-auto">
+                <input type="number" id="phoneSignUp" placeholder="Chỉ được nhập số (0-9)"/>
+                <span id="spanPhone" class="text-danger"></span>
               </div>
             </div>
           </div>
 
-
-
-
-
-          <div class="registerCybersoft__item">
-            <button type="submit" class="btn btnRegister">Đăng ký</button>
+          <div class="registerCybersoft__item input-group">
+            <button type="submit" class="btn btnRegister" id="register">Đăng ký</button>
+          </div>
+          <div>
+            <span id="successRegister" class="text-danger"></span>
           </div>
         </div>
-      </form>
     </div>
   </section>
 
@@ -193,6 +206,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../model/user.js"></script>   
+    <script src="../model/shoes.js"></script>   
+    <script src="../controller/validation.js"></script>
+    <script src="../controller/main1.js"></script>
+    <script src="../controller/category.js"></script>
+    <script src="../controller/register1.js"></script>
+
 </body>
 
 </html>
