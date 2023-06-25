@@ -5,3 +5,4 @@ function User(emailUser, passUser, tenUser, genderUser, phoneUser) {
 	this.gender = genderUser || true;
     this.phone = phoneUser;	
 }
+	

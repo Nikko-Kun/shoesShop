@@ -116,22 +116,29 @@
           </p>
         </div>
       </div>
-      <form>
-        <div class="login-form">
-          <div class="loginCybersoft__item">
-            <label for="loginEmail">Email</label>
-            <input name="email" type="email" id="loginEmail" placeholder="Vui lòng nhập email của bạn" />
+        <div class="form-group" id="form">
+          <div class="loginCybersoft__item input-group">
+            <label for="">Email</label>
+            <input type="text" id="loginEmail" placeholder="Vui lòng nhập email của bạn" />
+            <div>
+              <span id="spanLoginEmail" class="text-danger"> </span>
+            </div>
           </div>
-          <div class="loginCybersoft__item">
-            <label for="loginPass">Password</label>
-            <input name="password" type="password" id="loginPass" placeholder="Vui lòng nhập mật khẩu" />
+          <div class="loginCybersoft__item input-group">
+            <label for="">Password</label>
+            <input type="text" id="loginPass" placeholder="Vui lòng nhập mật khẩu" />
+            <div>
+              <span id="spanLoginPass" class="text-danger"> </span>
+            </div>
+            
           </div>
-          <div class="loginCybersoft__item">
-            <button type="submit" class="btn btnLogIn">Đăng nhập</button>
+          <div class="loginCybersoft__item input-group">
+            <button class="btn btnLogIn" id="btnSignIn">Đăng nhập</button>
           </div>
+          </div>
+         
         </div>
-      </form>
-    </div>
+
   </section>
 
   <footer></footer>
@@ -142,6 +149,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../model/shoes.js"></script>   
+    <script src="../controller/validation.js"></script>
+    <script src="../controller/main.js"></script>
+    <script src="../controller/category.js"></script>
+    <script src="../controller/login.js"></script>
+
+
+
 </body>
 
 </html>

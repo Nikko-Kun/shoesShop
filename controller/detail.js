@@ -41,7 +41,7 @@ function hienThiRelateSP(mang) {
   var boxSP = document.getElementById("listShoes");
   mang.map(function (sp, index) {
     content += `<div class="col-4 mt-4 col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-    <div class="card" style="width: 22rem;">
+    <div class="card">
       <img src="${sp.image}" class="card-img-top" alt="${sp.alias}">
       <div class="card-body">
         <h5 class="card-title d-flex justify-content-between">
