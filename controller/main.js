@@ -1,18 +1,22 @@
+window.onload = function () {
+  layDanhSachSP();
+};
+
 function layDanhSachSP() {
   axios({
     method: "get",
     url: "https://shop.cyberlearn.vn/api/Product",
   })
     .then(function (result) {
-      //thành công      
+      //thành công
       hienThiSP(result.data.content);
+     
     })
     .catch(function (error) {
       //thất bại
       console.log(error);
     });
 }
-layDanhSachSP();
 
 function hienThiSP(mang) {
   var content = "";
@@ -35,7 +39,6 @@ function hienThiSP(mang) {
     </div>
   </div>`;
   });
-  boxSP.innerHTML = content;    
+  boxSP.innerHTML = content;
 }
-
 
