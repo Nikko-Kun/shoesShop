@@ -18,6 +18,13 @@
         align-items: center;
         .navbar-nav {
           flex-direction: row;
+          .nav-item {
+            font-size: $fs-2;
+            margin: $mg-1;
+        }
+        button{
+            border-radius: $br-1;
+        }
           .active {
             .nav-link {
               color: $color-black-1;
@@ -33,6 +40,7 @@
               color: $color-black-1;
             }
           }
+          
         }
       }
       .menuCybersoft__left {
@@ -41,15 +49,20 @@
         }
       }
       .menuCybersoft__right {
+        
         .nav-link {
           padding-left: 30px;
         }
+
+       }
       }
     }
   }
   
-}
 
+#logOut{
+  display: none;
+}
 @include responsive("medium") {
   .menuCybersoft {
     font-size: $fs-13;

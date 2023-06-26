@@ -22,179 +22,182 @@
 </head>
 
 <body>
-  <!--! HEADER  -->
-  <header>
-    <div class="container">
-      <nav class="navbar">
-        <a href="#" class="logoCybersoft">
-          <img src="../asset/img/logo.png" alt="Logo Cybersoft" />
-        </a>
-        <div class="header__content">
-          <div class="header__item">
-            <div class="header__search">
-              <div class="relative">
-                <div class="absolute">
-                  <button class="btn btnSearch">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
+    <!--! HEADER  -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html" class="logoCybersoft">
+            <img src="../asset/img/logo.png" alt="Logo Cybersoft" />
+          </a>
+          <div class="header__content">
+            <div class="header__item">
+              <div class="header__search">
+                <div class="relative">
+                  <div class="absolute">
+                    <button class="btn btnSearch">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </div>
+                  <input type="text" id="txtSearch" placeholder="Search ...." />
                 </div>
-                <input type="text" id="txtSearch" placeholder="Search ...." />
               </div>
             </div>
-          </div>
-          <div class="header__cart">
-            <a class="nav-link" href="./cart.html">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="total-qtycart">0</span>
-            </a>
-          </div>
-          <div class="header__like">
-            <a class="nav-link" href="#">
-              <i class="fa-solid fa-heart"></i>
-              <span class="total-qtylike">0</span>
-            </a>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+            <div class="header__cart" id="cartHeader">
+              <a class="nav-link" href="../view/cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cartNumber">0</span>
+              </a>
+            </div>
 
-  <!--! MENU  -->
-  <nav class="menuCybersoft">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="menuCybersoft__left">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="../index.html">
-                <i class="fa-solid fa-house"></i>
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="nav-item">
+            <div class="header__like">
               <a class="nav-link" href="#">
-                <i class="fa-solid fa-folder-tree"></i>
-                <span>products</span>
+                <i class="fa-solid fa-heart"></i>
+                <span class="total-qtylike">0</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="menu-contact">contact</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="menuCybersoft__right">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./login.html">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                <span>log in</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./register.html">
-                <i class="fa-solid fa-user-plus"></i>
-                <span>Register</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </nav>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--! MENU  -->
+    <nav class="menuCybersoft">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="menuCybersoft__left">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa-solid fa-folder-tree"></i>
+                  <span>products</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="menu-contact">contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menuCybersoft__right">
+            <ul class="navbar-nav components-group" id="isNotLogIn">
+              <li class="nav-item">
+                <a class="nav-link" href="../view/login.html"><span>Log In</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../view/register.html"><span>Register</span></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav components-group" id="isLogIn">
+              <li class="nav-item">
+                <button class="btn btn-light d-none" id="logOut">LOG OUT</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </nav>
 
   <!--! REGISTER  -->
   <section class="registerCybersoft">
     <div class="container">
-      <div class="registerCybersoft__title">
-        <h1>Register</h1>
-        <div>
-          <p>
-            Nếu đã có tài khoản
-            <a href="./login.html">nhấn vào đây</a>
-            để đăng nhập!!
-          </p>
-        </div>
-      </div>
-        <div class="register-form" id="form">
-          <div class="registerCybersoft__item input-group">
-            <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="" class="col-form-label res-lable">Họ tên</label>
-              </div>
-              <div class="col-auto">
-                <input type="text" id="nameSignUp" placeholder="Chỉ nhập ký tự chữ"/>
-                <span id="spanName" class="text-danger"></span>
-              </div>
-            </div>
-          </div>
-          <div class="registerCybersoft__item input-group">
-            <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="" class="col-form-label res-lable">Giới tính</label>
-              </div>
-              <div class="col-auto inputGender">
-              <select id="genderSignUp" class="form-control res-input">
-                  <option value='true'>Nam</option>
-                  <option value='false' >Nữ</option>
-              </select>
-              <span id="spanGender" class="text-danger"></span>
-              </div>
-            </div>
-          </div>
-          <div class="registerCybersoft__item input-group">
-            <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="" class="col-form-label res-lable">Email</label>
-              </div>
-              <div class="col-auto">
-                <input type="email" id="emailSignUp" placeholder="email@gmail.com"/>
-                <span id="spanEmail" class="text-danger"></span>
-              </div>
-            </div>
-          </div>
-          <div class="registerCybersoft__item input-group">
-            <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="" class="col-form-label res-lable">Password</label>
-              </div>
-              <div class="col-auto">
-                <input type="text" id="passwordSignUp" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
-                <span id="spanPass" class="text-danger"></span>
-              </div>
-            </div>
-          </div>
-          <div class="registerCybersoft__item input-group">
-            <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="" class="col-form-label res-lable">Password Confirm</label>
-              </div>
-              <div class="col-auto">
-                <input type="text" id="passwordConfirmSignUp" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
-                <span id="spanPassConfirm" class="text-danger"></span>
-              </div>
-            </div>
-          </div>
-          <div class="registerCybersoft__item input-group">
-            <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="" class="col-form-label res-lable">Phone</label>
-              </div>
-              <div class="col-auto">
-                <input type="number" id="phoneSignUp" placeholder="Chỉ được nhập số (0-9)"/>
-                <span id="spanPhone" class="text-danger"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="registerCybersoft__item input-group">
-            <button type="submit" class="btn btnRegister" id="register">Đăng ký</button>
-          </div>
+      <div class="formRegister">
+        <div class="registerCybersoft__title">
+          <h1>Register</h1>
           <div>
-            <span id="successRegister" class="text-danger"></span>
+            <p>
+              Nếu đã có tài khoản
+              <a href="./login.html">nhấn vào đây</a>
+              để đăng nhập!!
+            </p>
           </div>
         </div>
+          <div class="register-form" id="form">
+            <div class="registerCybersoft__item input-group">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="" class="col-form-label res-lable">Họ tên</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="nameSignUp" placeholder="Chỉ nhập ký tự chữ"/>
+                  <span id="spanName" class="text-danger"> </span>
+                </div>
+              </div>
+            </div>
+            <div class="registerCybersoft__item input-group">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="" class="col-form-label res-lable">Giới tính</label>
+                </div>
+                <div class="col-auto inputGender">
+                <select id="genderSignUp" class="form-control res-input">
+                    <option value='true'>Nam</option>
+                    <option value='false' >Nữ</option>
+                </select>
+                <span id="spanGender" class="text-danger"> </span>
+                </div>
+              </div>
+            </div>
+            <div class="registerCybersoft__item input-group">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="" class="col-form-label res-lable">Email</label>
+                </div>
+                <div class="col-auto">
+                  <input type="email" id="emailSignUp" placeholder="email@gmail.com"/>
+                  <span id="spanEmail" class="text-danger"> </span>
+                </div>
+              </div>
+            </div>
+            <div class="registerCybersoft__item input-group">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="" class="col-form-label res-lable">Password</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="passwordSignUp" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
+                  <span id="spanPass" class="text-danger"> </span>
+                </div>
+              </div>
+            </div>
+            <div class="registerCybersoft__item input-group">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="" class="col-form-label res-lable">Password Confirm</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="passwordConfirmSignUp" placeholder="Phải chứa ký tự chữ, số, in hoa và ký tự đặt biệt"/>
+                  <span id="spanPassConfirm" class="text-danger"> </span>
+                </div>
+              </div>
+            </div>
+            <div class="registerCybersoft__item input-group">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="" class="col-form-label res-lable">Phone</label>
+                </div>
+                <div class="col-auto">
+                  <input type="number" id="phoneSignUp" placeholder="Chỉ được nhập số (0-9)"/>
+                  <span id="spanPhone" class="text-danger"> </span>
+                </div>
+              </div>
+            </div>
+  
+            <div class="registerCybersoft__item input-group">
+              <button type="submit" class="btn btnRegister" id="register">Đăng ký</button>
+            </div>
+            <div>
+              <span id="successRegister" class="text-danger"> </span>
+            </div>
+          </div>
+      </div>
+
     </div>
   </section>
 
@@ -203,17 +206,19 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script src="../model/user.js"></script>   
-    <script src="../model/shoes.js"></script>   
-    <script src="../controller/validation.js"></script>
-    <script src="../controller/main.js"></script>
-    <script src="../controller/category.js"></script>
-    <script src="../controller/register.js"></script>
+    
+    <script src="../model/validation.js"></script>
+
+    <script src="../controller/register.js"></script> 
+
 
 </body>
 

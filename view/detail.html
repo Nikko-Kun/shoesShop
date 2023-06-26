@@ -22,94 +22,93 @@
 </head>
 
 <body>
-  <!--! HEADER  -->
-  <header>
-    <div class="container">
-      <nav class="navbar">
-        <a href="#" class="logoCybersoft">
-          <img src="../asset/img/logo.png" alt="Logo Cybersoft" />
-        </a>
-        <div class="header__content">
-          <div class="header__item">
-            <div class="header__search">
-              <div class="relative">
-                <div class="absolute">
-                  <button class="btn btnSearch">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
+    <!--! HEADER  -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html" class="logoCybersoft">
+            <img src="../asset/img/logo.png" alt="Logo Cybersoft" />
+          </a>
+          <div class="header__content">
+            <div class="header__item">
+              <div class="header__search">
+                <div class="relative">
+                  <div class="absolute">
+                    <button class="btn btnSearch">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </div>
+                  <input type="text" id="txtSearch" placeholder="Search ...." />
                 </div>
-                <input type="text" id="txtSearch" placeholder="Search ...." />
               </div>
             </div>
-          </div>
-          <div class="header__cart">
-            <a class="nav-link" href="./cart.html">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="total-qtycart">0</span>
-            </a>
-          </div>
-          <div class="header__like">
-            <a class="nav-link" href="#">
-              <i class="fa-solid fa-heart"></i>
-              <span class="total-qtylike">0</span>
-            </a>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+            <div class="header__cart" id="cartHeader">
+              <a class="nav-link" href="../view/cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cartNumber">0</span>
+              </a>
+            </div>
 
-  <!--! MENU  -->
-  <nav class="menuCybersoft">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="menuCybersoft__left">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="../index.html">
-                <i class="fa-solid fa-house"></i>
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="nav-item">
+            <div class="header__like">
               <a class="nav-link" href="#">
-                <i class="fa-solid fa-folder-tree"></i>
-                <span>products</span>
+                <i class="fa-solid fa-heart"></i>
+                <span class="total-qtylike">0</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="menu-contact">contact</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-        <div class="menuCybersoft__right">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./login.html">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                <span>log in</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./register.html">
-                <i class="fa-solid fa-user-plus"></i>
-                <span>register</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </nav>
+    <!--! MENU  -->
+    <nav class="menuCybersoft">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="menuCybersoft__left">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa-solid fa-folder-tree"></i>
+                  <span>products</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="menu-contact">contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menuCybersoft__right">
+            <ul class="navbar-nav components-group" id="isNotLogIn">
+              <li class="nav-item">
+                <a class="nav-link" href="../view/login.html"><span>Log In</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../view/register.html"><span>Register</span></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav components-group" id="isLogIn">
+              <li class="nav-item">
+                <button class="btn btn-light d-none" id="logOut">LOG OUT</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </nav>
 
   <!--! DETAIL PRODUCT  -->
-  <section class="detailPro">
-    <div class="container" id="detailProduct">
-      <div class="detailPro__content">
-        <div class="detailPro__left">
+  <section class="product-detail">
+    <div class="container" >
+      <div class="row" id="product-detail">
+        <!-- <div class="detailPro__left">
           <img src="" alt="" />
         </div>
         <div class="detailPro__right">
@@ -213,7 +212,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -221,10 +220,10 @@
   <!--! PRODUCTS  -->
   <section class="product">
     <div class="container">
-      <div class="product-related">
+      <div class="related-product">
         <h1>- Related Products -</h1>
       </div>
-      <div class="row" id="listShoes">
+      <div class="row" id="cybershoes-related-product">
 
       </div>
     </div>
@@ -334,10 +333,11 @@
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-
-  <script src="../model/shoes.js"></script>
-  <script src="../controller/detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../controller/logout.js"></script>
+    <script src="../model/cartList.js"></script>
+    <script src="../model/cartItem.js"></script>
+    <script src="../controller/detail.js"></script>
 </body>
 
 </html>

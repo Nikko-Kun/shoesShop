@@ -260,6 +260,16 @@ header .navbar .header__content .header__like .nav-link .total-qtylike {
 .menuCybersoft .container {
   padding: 0;
 }
+.menuCybersoft .container .boxMenu {
+  position: relative;
+  width: 90px;
+}
+.menuCybersoft .container .boxMenu:hover .checked .userMenu {
+  display: block;
+}
+.menuCybersoft .container .boxMenu .LoginContent .userMenu {
+  display: none;
+}
 .menuCybersoft .container .navbar {
   display: flex;
   justify-content: space-between;

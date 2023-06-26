@@ -1,62 +1,143 @@
-var nameProduct, idProduct, sanPhamHienTai;
 
-window.onload = function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get("detail");
+const cartList = new CartList();
 
-  xemChiTietSP(myParam);
+const setLocalStorage = () => {
+  localStorage.setItem("cartList", JSON.stringify(cartList.itemArray));
 };
 
-function xemChiTietSP(idSP) {
+function addToCart() {
+  cartList.itemArray = JSON.parse(localStorage.getItem("cartList"));
+  if (cartList.itemArray == null) {
+    cartList.itemArray = [];
+  }
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get("productid");
+
   axios({
     method: "get",
-    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${idSP}`,
+    url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + myParam,
   })
     .then(function (result) {
-      //thành công
-      // console.log(result.data.content);
-      var divChiTiet = document.getElementsByClassName("detailPro__content")[0];
-      var hinh = divChiTiet.querySelector(".detailPro__left img");
-      hinh.src= result.data.content.image;
-      var tag = divChiTiet.querySelector(".detailPro__left img");
-      tag.alt = result.data.content.alias;
-      var h1 = divChiTiet.getElementsByTagName("h1")[0];
-      h1.innerHTML = result.data.content.name;
-      var sold = divChiTiet.getElementsByTagName("b")[0];
-      sold.innerHTML = result.data.content.quantity;
-      var h3 = divChiTiet.getElementsByTagName("h3")[0];
-      h3.innerHTML = "$" + result.data.content.price;    
-      var p = divChiTiet.getElementsByTagName('p')[0];
-      p.innerHTML = result.data.content.description;
-       
-      hienThiRelateSP(result.data.content.relatedProducts);
+      let itemData = result.data.content;
+      return itemData;
     })
     .catch(function (error) {
       console.log(error);
     });
+
+  setTimeout(() => {
+    let id = itemData.id;
+    let img = itemData.image;
+    let name = itemData.name;
+    let price = itemData.price;
+    let quantityOrder = 1;
+
+    const item = new CartItem(id, img, name, price, quantityOrder);
+
+    if (cartList.isExist(id) === false) {
+      cartList.add(item);
+      alert("Add new item to cart success");
+    } else {
+      cartList.quantityUp(item);
+      alert("Add item to cart success");
+    }
+
+    setLocalStorage();
+  }, 1000);
 }
 
-function hienThiRelateSP(mang) {
-  var content = "";
-  var boxSP = document.getElementById("listShoes");
-  mang.map(function (sp, index) {
-    content += `<div class="col-4 mt-4 col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+window.onload = function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get("productid");
+
+  function getProduct() {
+    axios({
+      method: "get",
+      url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + myParam,
+    })
+      .then(function (result) {
+        renderProduct(result.data.content);
+        renderSizeBtn(result.data.content.size);
+        renderListRelatedProducts(result.data.content.relatedProducts);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+  getProduct();
+
+// renderProduct feature
+  const renderProduct = (product) => {
+    const productBox = document.getElementById("product-detail");
+
+    const { image, name, price, description } = product;
+
+    const content = `
+    <div class="col-12 col-md-6">
+    <img class="img-fluid" src="${image}" alt="">
+</div>
+<div class="col-12 col-md-6">
+    <div class="detail-text">
+        <h1 class="my-3">${name}</h1>
+        <h2 class="mb-3">$${price}.00</h2>
+        <p class="my-2">${description}</p>
+    </div>
+    <div class="detail-size mt-4">
+        <h2 class="mb-3">Available Size</h2>
+        <div class="size-btn-group">
+        </div>
+    </div>
+    <button class="cybershoes-carousel-btn my-5" id="addToCart5" onclick="addToCart()">Add to cart</button>
+</div>
+        `;
+  productBox.innerHTML = content; 
+  };
+// renderSizeBtn feature
+const renderSizeBtn = (listSize) => {
+  const sizeBox = document.querySelector("#product-detail .size-btn-group");
+
+  const content = listSize.map((size) => {
+    return `
+    <button class="size-btn">${size}</button>
+            `;
+  });
+
+  sizeBox.innerHTML = content.join("");
+};
+
+// renderListRelatedProducts feature
+const renderListRelatedProducts = (relatedProducts) => {
+  const productBox = document.getElementById("cybershoes-related-product");
+
+  const content = relatedProducts.map((product) => {
+    const { image, name, price, id, description } = product;
+    return `<div class="col-4 mt-4 col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
     <div class="card">
-      <img src="${sp.image}" class="card-img-top" alt="${sp.alias}">
+      <img src="${image}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title d-flex justify-content-between">
           <span>
-            ${sp.name}
+            ${name}
           </span>
           <i class="fa-sharp fa-regular fa-heart like-icon"></i>
         </h5>
-        <p class="card-text">${sp.shortDescription}</p>
-        <a href="./detail.html?detail=${sp.id}" onclick="xemChiTietSP('${sp.id}')" class="btn btn-warning btn-buy">Buy Now</a>
-        <i class="fa-solid fa-tag price-tag"></i>  ${sp.price}$
+        <div class="card-rate mb-3">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p class="card-text">${description}</p>
+        <a href="./view/detail.html?detail=${id}" onclick="xemChiTietSP('${id}')" class="btn btn-warning btn-buy">Buy Now</a>
+        <i class="fa-solid fa-tag price-tag"></i>  ${price}$
       </div>
     </div>
   </div>`;
   });
-  boxSP.innerHTML = content;    
+
+  productBox.innerHTML = content.join("");
+};
+
 }
 

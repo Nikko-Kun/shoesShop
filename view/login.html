@@ -18,14 +18,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../asset/css/main.css" />
-  </head>
-  <body>
+  <link rel="stylesheet" href="../asset/css/main.css" />
+</head>
+
+<body>
     <!--! HEADER  -->
     <header>
       <div class="container">
         <nav class="navbar">
-          <a href="#" class="logoCybersoft">
+          <a href="../index.html" class="logoCybersoft">
             <img src="../asset/img/logo.png" alt="Logo Cybersoft" />
           </a>
           <div class="header__content">
@@ -41,12 +42,13 @@
                 </div>
               </div>
             </div>
-            <div class="header__cart">
-              <a class="nav-link" href="#">
+            <div class="header__cart" id="cartHeader">
+              <a class="nav-link" href="../view/cart.html">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span class="total-qtycart">0</span>
+                <span class="cartNumber">0</span>
               </a>
             </div>
+
             <div class="header__like">
               <a class="nav-link" href="#">
                 <i class="fa-solid fa-heart"></i>
@@ -58,50 +60,49 @@
       </div>
     </header>
 
-  <!--! MENU  -->
-  <nav class="menuCybersoft">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="menuCybersoft__left">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="../index.html">
-                <i class="fa-solid fa-house"></i>
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa-solid fa-folder-tree"></i>
-                <span>products</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="menu-contact">contact</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="menuCybersoft__right">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./login.html">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                <span>log in</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./register.html">
-                <i class="fa-solid fa-user-plus"></i>
-                <span>register</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </nav>
+    <!--! MENU  -->
+    <nav class="menuCybersoft">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="menuCybersoft__left">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa-solid fa-folder-tree"></i>
+                  <span>products</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="menu-contact">contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menuCybersoft__right">
+            <ul class="navbar-nav components-group" id="isNotLogIn">
+              <li class="nav-item">
+                <a class="nav-link" href="../view/login.html"><span>Log In</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../view/register.html"><span>Register</span></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav components-group" id="isLogIn">
+              <li class="nav-item">
+                <button class="btn btn-light d-none" id="logOut">LOG OUT</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </nav>
 
   <!--! LOG IN  -->
   <section class="loginCybersoft">
@@ -116,28 +117,28 @@
           </p>
         </div>
       </div>
-        <div class="form-group" id="form">
-          <div class="loginCybersoft__item input-group">
-            <label for="">Email</label>
-            <input type="text" id="loginEmail" placeholder="Vui lòng nhập email của bạn" />
-            <div>
-              <span id="spanLoginEmail" class="text-danger"> </span>
-            </div>
+      <div class="form-group" id="form">
+        <div class="loginCybersoft__item input-group">
+          <label for="">Email</label>
+          <input type="text" id="loginEmail" placeholder="Vui lòng nhập email của bạn" />
+          <div>
+            <span id="spanLoginEmail" class="text-danger"> </span>
           </div>
-          <div class="loginCybersoft__item input-group">
-            <label for="">Password</label>
-            <input type="text" id="loginPass" placeholder="Vui lòng nhập mật khẩu" />
-            <div>
-              <span id="spanLoginPass" class="text-danger"> </span>
-            </div>
-            
-          </div>
-          <div class="loginCybersoft__item input-group">
-            <button class="btn btnLogIn" id="btnSignIn">Đăng nhập</button>
-          </div>
-          </div>
-         
         </div>
+        <div class="loginCybersoft__item input-group">
+          <label for="">Password</label>
+          <input type="text" id="loginPass" placeholder="Vui lòng nhập mật khẩu" />
+          <div>
+            <span id="spanLoginPass" class="text-danger"> </span>
+          </div>
+
+        </div>
+        <div class="loginCybersoft__item input-group">
+          <button class="btn btnLogIn" id="btnSignIn">Đăng nhập</button>
+        </div>
+      </div>
+
+    </div>
 
   </section>
 
@@ -151,12 +152,9 @@
     crossorigin="anonymous"></script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script src="../model/shoes.js"></script>   
-    <script src="../controller/validation.js"></script>
-    <script src="../controller/main.js"></script>
-    <script src="../controller/category.js"></script>
-    <script src="../controller/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="../controller/login.js"></script>
+  <script src="../controller/logout.js"></script>
 
 
 

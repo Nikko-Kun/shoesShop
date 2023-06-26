@@ -93,7 +93,7 @@
 }
 
 .btnPlus {
-  @include styleText($color-black-1, $fs-16, $fw-400);
+  @include styleText($color-primary-2, $fs-16, $fw-400);
   @include styleButton(
     $color-white-1,
     8px,
@@ -105,7 +105,7 @@
   text-align: center;
   border-left: none;
   &:hover {
-    background-color: $color-gray-3;
+    background-color: $color-yellow-1;
     outline: none;
     &:focus {
       box-shadow: none;
