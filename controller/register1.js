@@ -1,3 +1,5 @@
+const validation = new Validation();
+
 function register() {
   var name = getID("nameSignUp").value;
   var gender = getID("genderSignUp").value;
