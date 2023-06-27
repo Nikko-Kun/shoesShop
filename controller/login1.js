@@ -1,3 +1,5 @@
+const cartData = [];
+
 function logIn() {
   var email = getID("loginEmail").value;
   var password = getID("loginPass").value;
@@ -13,12 +15,15 @@ function logIn() {
     data: user,
   })
     .then(function (result) {
-      var tk = result.data.content;
-      localStorage.setItem("token", JSON.stringify(tk.accessToken));
-          
-      alert(result.data.message);
-      window.location.href = "../index.html";     
+      const logInfo = result.data.content;      
+      localStorage.setItem("cartData" + "." + email, JSON.stringify([]));
+      localStorage.setItem("logInfo",JSON.stringify(logInfo));
 
+      alert(result.data.message);
+      window.location.href = "../index.html";
+
+     
+      return cartData.push(logInfo);
     })
     .catch(function (error) {
       alert(error.response.data.message);
@@ -26,5 +31,4 @@ function logIn() {
 }
 
 getID("btnSignIn").onclick = logIn;
-
 
