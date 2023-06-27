@@ -1,5 +1,3 @@
-const validation = new Validation();
-
 function register() {
   var name = getID("nameSignUp").value;
   var gender = getID("genderSignUp").value;
@@ -103,7 +101,7 @@ function register() {
         window.location.href = "./login.html";
       })
       .catch(function (error) {
-        console.log(error);
+        alert(error.response.data.message);
       });
   }
 }
